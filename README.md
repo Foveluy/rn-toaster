@@ -18,7 +18,7 @@ This component is compatible with React Native 0.25 and newer.
 ## Installation
 
 ```
-npm install react-native-smart-toast --save
+npm install rn-toaster --save
 ```
 
 ## Full Demo
@@ -27,8 +27,8 @@ see [ReactNativeComponentDemos][0]
 
 ## Usage
 
-Install the toast from npm with `npm install react-native-smart-toast --save`.
-Then, require it from your app's JavaScript files with `import toast from 'react-native-smart-toast'`.
+Install the toast from npm with `npm install rn-toaster --save`.
+Then, require it from your app's JavaScript files with `import toast from 'rn-toaster'`.
 
 ```js
 import React, { Component } from "react";
@@ -36,7 +36,7 @@ import { View } from "react-native";
 
 import Button from "react-native-smart-button";
 import TimerEnhance from "react-native-smart-timer-enhance";
-import Toast from "react-native-smart-toast";
+import Toast from "rn-toaster";
 
 class LoadingToast extends Component {
   constructor(props) {
