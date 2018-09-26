@@ -1,0 +1,29 @@
+{
+  "name": "rn-toaster",
+  "version": "1.0.0",
+  "description": "A android like toast for react-native apps",
+  "main": "Toast.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Foveluy/rn-toaster.git"
+  },
+  "keywords": [
+    "react-native",
+    "smart",
+    "toast",
+    "component"
+  ],
+  "author": "HISAME SHIZUMARU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Foveluy/rn-toaster/issues"
+  },
+  "homepage": "https://github.com/Foveluy/rn-toaster#readme",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-native-smart-timer-enhance": "^1.0.3"
+  }
+}
