@@ -1,9 +1,9 @@
-# react-native-smart-toast
+# rn-toaster
 
-[![npm](https://img.shields.io/npm/v/react-native-smart-toast.svg)](https://www.npmjs.com/package/react-native-smart-toast)
-[![npm](https://img.shields.io/npm/dm/react-native-smart-toast.svg)](https://www.npmjs.com/package/react-native-smart-toast)
-[![npm](https://img.shields.io/npm/dt/react-native-smart-toast.svg)](https://www.npmjs.com/package/react-native-smart-toast)
-[![npm](https://img.shields.io/npm/l/react-native-smart-toast.svg)](https://github.com/react-native-component/react-native-smart-toast/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/rn-toaster.svg)](https://www.npmjs.com/package/rn-toaster)
+[![npm](https://img.shields.io/npm/dm/rn-toaster.svg)](https://www.npmjs.com/package/rn-toaster)
+[![npm](https://img.shields.io/npm/dt/rn-toaster.svg)](https://www.npmjs.com/package/rn-toaster)
+[![npm](https://img.shields.io/npm/l/rn-toaster.svg)](https://github.com/react-native-component/rn-toaster/blob/master/LICENSE)
 
 A android like toast for react-native apps, written in JS for cross-platform support.
 It works on iOS and Android.
@@ -12,8 +12,8 @@ This component is compatible with React Native 0.25 and newer.
 
 ## Preview
 
-![react-native-smart-toast-preview-ios][1]
-![react-native-smart-toast-preview-android][2]
+![rn-toaster-preview-ios][1]
+![rn-toaster-preview-android][2]
 
 ## Installation
 
@@ -278,7 +278,7 @@ export default TimerEnhance(LoadingToast);
   - animationEnd: determine the callback when animation is end
 
 [0]: https://github.com/cyqresig/ReactNativeComponentDemos
-[1]: http://cyqresig.github.io/img/react-native-smart-toast-preview-ios-v1.0.0.gif
-[2]: http://cyqresig.github.io/img/react-native-smart-toast-preview-android-v1.0.0.gif
+[1]: http://cyqresig.github.io/img/rn-toaster-preview-ios-v1.0.0.gif
+[2]: http://cyqresig.github.io/img/rn-toaster-preview-android-v1.0.0.gif
 [3]: https://facebook.github.io/react-native/docs/style.html
 [4]: http://facebook.github.io/react-native/docs/text.html#style
