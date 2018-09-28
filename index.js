@@ -7,7 +7,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-  View,
   Text,
   StyleSheet,
   Animated,
@@ -27,7 +26,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 8,
     left: -9999,
-    top: -9999,
     zIndex: 999
   },
   text: {
@@ -65,7 +63,7 @@ class Toast extends Component {
     this.state = {
       position: props.position,
       visible: false,
-      opacity: new Animated.Value(0),
+      top: new Animated.Value(-100),
       children: props.children
     };
     this._toastWidth = null;
@@ -86,11 +84,7 @@ class Toast extends Component {
       <Animated.View
         ref={component => (this._container = component)}
         onLayout={this._onToastLayout}
-        style={[
-          styles.container,
-          this.props.style,
-          { opacity: this.state.opacity }
-        ]}
+        style={[styles.container, this.props.style, { top: this.state.top }]}
       >
         {children}
       </Animated.View>
@@ -104,7 +98,8 @@ class Toast extends Component {
       duration = this.props.animatedDuration,
       easing = Easing.linear,
       delay = this.props.delay,
-      animationEnd
+      animationEnd,
+      toValue = 100
     } = {
       children: this.state.children,
       position: this.state.position,
@@ -127,17 +122,18 @@ class Toast extends Component {
       visible: true
     });
 
-    this._toastShowAnimation = Animated.timing(this.state.opacity, {
-      toValue: 1,
+    this._toastShowAnimation = Animated.spring(this.state.top, {
+      toValue: toValue,
       duration,
       easing,
-      delay
+      delay,
+      tension: 30
     });
     this._toastShowAnimation.start(() => {
       this._toastShowAnimation = null;
       if (!animationEnd) {
         this._toastAnimationToggle = this.setTimeout(() => {
-          this.hide({ duration, easing, delay });
+          this.hide({ duration, easing, delay, toValue: -toValue });
           this._toastAnimationToggle = null;
         }, this.props.duration);
       } else {
@@ -151,7 +147,8 @@ class Toast extends Component {
       duration = this.props.animatedDuration,
       easing = Easing.linear,
       delay = this.props.delay,
-      animationEnd
+      animationEnd,
+      toValue = 0
     } = {
       duration: this.props.animatedDuration,
       easing: Easing.linear,
@@ -162,8 +159,8 @@ class Toast extends Component {
     this._toastHideAnimation && this._toastHideAnimation.stop();
     this.clearTimeout(this._toastAnimationToggle);
 
-    this._toastHideAnimation = Animated.timing(this.state.opacity, {
-      toValue: 0,
+    this._toastHideAnimation = Animated.spring(this.state.top, {
+      toValue: toValue,
       duration,
       easing,
       delay

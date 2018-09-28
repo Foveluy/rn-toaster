@@ -54,7 +54,7 @@ declare module "rn-toaster" {
   }
 
   export default class Toast extends Component<ToasterProps, any> {
-    static show(props: ShowProps);
-    static hide(props: HideProps);
+    show(props: ShowProps);
+    hide(props: HideProps);
   }
 }

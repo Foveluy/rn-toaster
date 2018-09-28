@@ -1,6 +1,6 @@
 {
   "name": "rn-toaster",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A android like toast for react-native apps",
   "main": "index.js",
   "scripts": {
