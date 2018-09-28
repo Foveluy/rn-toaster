@@ -30,6 +30,8 @@ declare module "rn-toaster" {
     //determine the marginTop of the root container view, it is used when toast's position is constants.top
     // default: 0
     marginTop?: Number;
+
+    
   }
   enum Gravity {
     bottom = 0,
@@ -44,6 +46,8 @@ declare module "rn-toaster" {
     easing?: any;
     delay?: Number;
     animationEnd?: Number;
+    // default = 100
+    toValue?:Number
   }
 
   interface HideProps {
@@ -51,6 +55,8 @@ declare module "rn-toaster" {
     easing?: any;
     delay?: Number;
     animationEnd?: Number;
+    // default = 100
+    toValue?:Number
   }
 
   export default class Toast extends Component<ToasterProps, any> {

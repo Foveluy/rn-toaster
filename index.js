@@ -196,7 +196,6 @@ class Toast extends Component {
     this._container.setNativeProps({
       style: {
         left,
-        top,
         bottom
       }
     });
