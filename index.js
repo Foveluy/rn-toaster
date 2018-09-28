@@ -99,7 +99,8 @@ class Toast extends Component {
       easing = Easing.linear,
       delay = this.props.delay,
       animationEnd,
-      toValue = 100
+      toValue = 100,
+      toValueHide
     } = {
       children: this.state.children,
       position: this.state.position,
@@ -133,7 +134,12 @@ class Toast extends Component {
       this._toastShowAnimation = null;
       if (!animationEnd) {
         this._toastAnimationToggle = this.setTimeout(() => {
-          this.hide({ duration, easing, delay, toValue: -toValue - 100 });
+          this.hide({
+            duration,
+            easing,
+            delay,
+            toValue: toValueHide ? toValueHide : -toValue
+          });
           this._toastAnimationToggle = null;
         }, this.props.duration);
       } else {

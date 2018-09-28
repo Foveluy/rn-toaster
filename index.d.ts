@@ -48,6 +48,8 @@ declare module "rn-toaster" {
     animationEnd?: Number;
     // default = 100
     toValue?:Number
+    // when hide
+    toValueHide?:Number
   }
 
   interface HideProps {
@@ -57,6 +59,8 @@ declare module "rn-toaster" {
     animationEnd?: Number;
     // default = 100
     toValue?:Number
+    // when hide
+    toValueHide?:Number
   }
 
   export default class Toast extends Component<ToasterProps, any> {
