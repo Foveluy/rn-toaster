@@ -133,7 +133,7 @@ class Toast extends Component {
       this._toastShowAnimation = null;
       if (!animationEnd) {
         this._toastAnimationToggle = this.setTimeout(() => {
-          this.hide({ duration, easing, delay, toValue: -toValue });
+          this.hide({ duration, easing, delay, toValue: -toValue - 100 });
           this._toastAnimationToggle = null;
         }, this.props.duration);
       } else {
